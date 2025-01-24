@@ -1,13 +1,12 @@
-import { Lego } from '@common/models/lego'
 import { MongoClient } from 'mongodb'
 
-const url = 'mongodb://localhost:27017'
+const databaseUrl = 'mongodb://db:27017'
 
 class DatabaseService {
   private client: MongoClient
 
   constructor() {
-    this.client = new MongoClient(url)
+    this.client = new MongoClient(databaseUrl)
     this.connect()
   }
 

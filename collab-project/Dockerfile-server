@@ -1,0 +1,10 @@
+FROM node:22
+
+WORKDIR /app/server
+
+COPY ./server /app/server
+COPY ./common /app/common
+
+RUN npm install
+
+CMD ["npm", "run", "start"]

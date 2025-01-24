@@ -15,7 +15,6 @@ export class LegoListComponent {
   legos: Lego[] = [];
 
   async ngOnInit() {
-    console.log("hey");
     const json = await fetch(`${serverUrl}/legos`);
     const data = await json.json();
     this.legos = data;
