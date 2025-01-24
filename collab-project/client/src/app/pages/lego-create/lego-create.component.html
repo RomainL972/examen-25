@@ -1,0 +1,29 @@
+<div><h2>Create a new lego</h2></div>
+
+<form [formGroup]="legoForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name: </label>
+    <input required type="text" id="name" name="name" formControlName="name">
+  </div>
+  <div>
+    <label for="color">Color: </label>
+    <input required type="color" id="color" name="color" formControlName="color">
+  </div>
+  <div>
+    <label for="size">Size: </label>
+    <input required type="text" id="size" name="size" formControlName="size">
+  </div>
+  <div>
+    <label for="price">Price: </label>
+    <input required type="number" id="price" name="price" formControlName="price"> $
+  </div>
+  <div>
+    <label for="quantity">Quantity: </label>
+    <input required type="number" id="quantity" name="quantity" formControlName="quantity">
+  </div>
+  <div><button type="submit">Create</button></div>
+</form>
+
+<div>
+  <a routerLink="/lego-list" routerLinkActive="true">List of legos</a>
+</div>

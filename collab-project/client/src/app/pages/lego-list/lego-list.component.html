@@ -1,0 +1,25 @@
+<div>
+  <p>List of legos</p>
+
+  <p><a href="/lego-create">Create a new lego</a></p>
+
+  <table *ngIf="legos.length > 0">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Color</th>
+      <th>Size</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let lego of legos">
+      <td>{{lego.id}}</td>
+      <td>{{lego.name}}</td>
+      <td><span [style.background-color]="lego.color" class="rectangle"></span></td>
+      <td>{{lego.size}}</td>
+      <td>{{lego.price}} $</td>
+      <td>{{lego.quantity}}</td>
+    </tr>
+  </table>
+</div>
+
